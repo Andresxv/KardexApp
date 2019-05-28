@@ -1,0 +1,7 @@
+Debe mostrar: 
+semestre inicio
+nombre estudiante
+código unesco materia, nombre, # créd, nota -> solo aprobadas //(primera iteración)
+
+Falta:
+Imprimir malla
