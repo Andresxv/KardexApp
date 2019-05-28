@@ -1,9 +1,6 @@
-var nameStudent = document.getElementsByClassName("dddefault")[0].innerHTML;
-nameStudent;
+var ia = document.getElementsByClassName("dddefault")[0].innerText;
 var dddefault=document.getElementsByClassName("dddefault");
-var ia="";
-dddefault.array.forEach(function(data) {
-    console.log(data);
-});
-window.alert(nameStudent+"\nMatriculado en",document.getElementsByClassName("ddlabel")[12].innerHTML);
-var nameStudent = document.getElementsByClassName("dddefault")[0].innerHTML;
+for(var i=21; i<document.getElementsByClassName("dddefault").length;i+=8){
+    ia+=document.getElementsByClassName("dddefault")[i].innerText+"  \n";
+}
+window.alert(ia);
