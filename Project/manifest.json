@@ -8,8 +8,8 @@
   
   "content_scripts": [
     {
-      "matches": ["*://google.com/*"],
-      "js": ["borderify.js"]
+      "matches": ["https://sigaa.upb.edu.co/BANPDN/bzskotrn.P_ViewTran"],
+      "js": ["index.js"]
     }
   ]
 
