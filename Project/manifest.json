@@ -5,10 +5,7 @@
 
   "description": "Description here.",
 
-  "icons": {
-    "48": "icons/border-48.png"
-  },
-
+  
   "content_scripts": [
     {
       "matches": ["*://google.com/*"],
