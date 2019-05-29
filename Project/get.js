@@ -4,6 +4,13 @@ var collection=document.getElementsByClassName("dddefault");
 var aux=0;
 Array.prototype.forEach.call(collection, function(element) {
     if(element.innerText=="UG"){ //element.colSpan == 5
+        if(parseInt(collection[aux+2].innerText)>=3){            
+            //green
+        }else if(parseInt(collection[aux+2].innerText)<3){
+            //red
+        }else{
+            //gray
+        }
         values+=collection[aux-2].innerText+" "+collection[aux-1].innerText+"\n"+collection[aux+1].innerText+" "+collection[aux+2].innerText+" "+parseInt(collection[aux+3].innerText)+"\n";
     }
     aux++;
