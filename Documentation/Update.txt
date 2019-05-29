@@ -1,3 +1,8 @@
+To-do:
+Vector de objetos inicializado de lista de materias; los semestres se separan por ;
+Se opera la colección de elementos para tomar los nombres de las materias, y alterar los objetos del vector
+Se ubican dentro de una tabla las materias del vector conforme al atributo semestre
+
 Debe mostrar: 
 semestre inicio
 nombre estudiante
@@ -5,3 +10,5 @@ código unesco materia, nombre, # créd, nota -> solo aprobadas //(primera iteraci
 
 Falta:
 Imprimir malla
+
+5 horas
