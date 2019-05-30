@@ -23,7 +23,7 @@ var arr=[];
 Array.prototype.forEach.call(collection, function(element) {
     if(element.innerText=="UG"){ //element.colSpan == 5
 
-        if(parseInt(collection[aux+2].innerText)>=3){            
+        if(parseInt(collection[aux+2].innerText)>=3 && !isNaN(collection[aux+3].innerText)){            
             //green
             values=collection[aux-2].innerText+"-"+collection[aux-1].innerText+"\n"+collection[aux+1].innerText+"\n"+collection[aux+2].innerText+"\n"+parseInt(collection[aux+3].innerText);
             arr.push(values.split("\n"));
