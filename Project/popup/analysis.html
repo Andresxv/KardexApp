@@ -2,27 +2,30 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <h6>
-            TITULO
-        </h6>
         <link rel="stylesheet" href="style.css" type="text/css"/>
         <link href='http://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet' type='text/css'>
     </head>
     <body>
+        <form  method="post" action="action.cgi" enctype="multipart/form-data">
+            <input type="file" name="my_data.csv">
+        </form>  
+        <h6>
+            TITULO
+        </h6>
         <div class="span7 medium">
         <table border="">
         <tr>
             <th colSpan="7" style="color: white" class="pricing-table-header-medium">
-                <center>-Código-</center>
+                <center>-CÓDIGO-</center>
             </th>
             <th colSpan="7" style="color: white" class="pricing-table-header-medium">
-                <center>-Nombre-</center>
+                <center>-NOMBRE-</center>
             </th>
             <th colSpan="7" style="color: white" class="pricing-table-header-medium">
-                <center>-Nota-</center>
+                <center>-NOTA-</center>
             </th>
             <th colSpan="7" style="color: white" class="pricing-table-header-medium">
-                <center>-Créditos-</center>
+                <center>-CRÉDITOS-</center>
             </th>
         </tr>
         <script type="text/javascript" src="../CSVToArray.js"></script>
