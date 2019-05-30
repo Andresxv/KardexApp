@@ -20,7 +20,7 @@ Array.prototype.forEach.call(collection, function(element) {
     aux++;
 });
 window.alert(student);//falta el promedio y el resto de cosas
-
+window.alert(arr);
 let csvContent = "data:text/csv;charset=utf-8," 
     + arr.map(e => e.join(",")).join("\n");
 //var encodedUri = encodeURI(csvContent);
