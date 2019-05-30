@@ -1,4 +1,4 @@
-function createTable(tableData) {
+function loadTable(tableData) {
     var table = document.createElement('table');
     var tableBody = document.createElement('tbody');
     tableData.forEach(function(rowData) {

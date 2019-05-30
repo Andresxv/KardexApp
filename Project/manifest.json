@@ -22,7 +22,7 @@
   "content_scripts": [
     {
       "matches": ["https://sigaa.upb.edu.co/BANPDN/*"],
-      "js": ["get.js"]
+      "js": ["createFile.js"]
     }
   ]
 
