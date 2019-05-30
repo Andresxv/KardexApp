@@ -1,13 +1,11 @@
-const rp= require('request-promise');
-const cherio=require('cheerio');
-const table=require("cli-table")
-
-
-var list=new array();
 var archivo=new XMLHttpRequest();
-archivo.open("GET",subjects.txt,false);
+archivo.open("GET","subjects.txt",true);
 archivo.send(null);
-var txt=archivo.responseText;
+var txt=archivo.responseText.split("\n");
+var list=new Array();
+window.alert("a");
 for(var i=0;i<txt.length;i++){
-    list.push(txt[i]);
+    let obj= {name:txt[i], semester, color, credits, code, note};
+    list.push(obj);
 }
+window.alert(list.length);
