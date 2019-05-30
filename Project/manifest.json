@@ -3,9 +3,22 @@
   "name": "KardexApp",
   "version": "1.0",
 
-  "description": "Description here.",
+  "description": "Extensión para interpretar los datos del cárdex UPB Colombia.",
 
-  
+  "icons": {
+    "48": "icons/upb.png"
+  },
+
+  "permissions": [
+    "activeTab"
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/upb.png",
+    "default_title": "Analizar",
+    "default_popup": "popup/analysis.html"
+  },
+
   "content_scripts": [
     {
       "matches": ["https://sigaa.upb.edu.co/BANPDN/*"],
