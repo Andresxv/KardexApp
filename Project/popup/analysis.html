@@ -7,13 +7,15 @@
     </head>
     <body>
         <form  method="post" action="action.cgi" enctype="multipart/form-data">
-            <input type="file" name="my_data.csv">
-        </form>  
+            <input type="file" name="my_data" id="my_data" accept="text/csv">
+        </form>
+        <button onclick="loadTable(document.getElementById('my_data'));">Generar tabla</button> 
         <h6>
-            TITULO
+            MATERIAS CURSADAS
         </h6>
+        <!--
         <div class="span7 medium">
-        <table border="">
+        <table border="" id="resultTable">
         <tr>
             <th colSpan="7" style="color: white" class="pricing-table-header-medium">
                 <center>-CÓDIGO-</center>
@@ -28,10 +30,10 @@
                 <center>-CRÉDITOS-</center>
             </th>
         </tr>
+        </table>
+        </div>-->
         <script type="text/javascript" src="../CSVToArray.js"></script>
         <script type="text/javascript" src="../loadTable.js"></script>
-        <script>loadTable(CSVToArray("my_data.csv"));</script>
-        </table>
-        </div>
+        
     </body>
 </html>

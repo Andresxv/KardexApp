@@ -1,11 +1,12 @@
 var student=document.getElementsByClassName("dddefault")[0].innerText+"\nMatriculado en "+document.getElementsByClassName("ddlabel")[12].innerText+"\n\n\nPorfavor descargue el archivo y cárguelo en la extensión de su derecha.";
 var collection=document.getElementsByClassName("dddefault");
 var aux=0;
-var subjects=[];
+//var subjects=[];
+var totalCred=166;
 var arr=[]; 
 Array.prototype.forEach.call(collection, function(element) {
     if(element.innerText=="UG"){ //element.colSpan == 5
-        if(parseInt(collection[aux+2].innerText)>=3 && !isNaN(collection[aux+3].innerText)){            
+        if(parseInt(collection[aux+2].innerText)>=3 && !isNaN(collection[aux+3].innerText)&& collection[aux-2].innerText!="DEPO" && collection[aux-2].innerText!="LGAP" && collection[aux-2].innerText!="ALEA"){            
             //green
             values=collection[aux-2].innerText+"-"+collection[aux-1].innerText+"\n"+collection[aux+1].innerText+"\n"+collection[aux+2].innerText+"\n"+parseInt(collection[aux+3].innerText);
             arr.push(values.split("\n"));

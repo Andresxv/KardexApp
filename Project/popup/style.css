@@ -89,7 +89,8 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2
 .pricing-table-header-medium {
     padding: 5px 0 5px 0;
     background: #c0392b;
-	border-bottom:10px solid #a12f23;
+  border-bottom:10px solid #a12f23;
+  color: white;
 
 }
 
