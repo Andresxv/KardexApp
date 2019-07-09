@@ -17,7 +17,7 @@
   "browser_action": {
     "default_icon": "icons/upb.png",
     "default_title": "Analizar",
-    "default_popup": "popup/analysis.html"
+    "default_popup": "popup/pop.html"
   },
 
   "content_scripts": [
