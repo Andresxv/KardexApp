@@ -25,8 +25,14 @@ Array.prototype.forEach.call(collection, function(element) {
     aux++;
 });
 
+// Regex para capturar optativas y electivas -> opt, elec
+var reOpt = /opt/i;
+var reEle = /ele/i;
+
+// Datos del estudiante a pasar por cookies
 document.cookie="studentName="+studentName+"; path=/";
 document.cookie="studentEnrollment="+studentEnrollment+"; path=/";
+
 window.alert(message);//falta el promedio y el resto de cosas
 
 //window.alert(arr);
