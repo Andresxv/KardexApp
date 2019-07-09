@@ -1,4 +1,8 @@
-var student=document.getElementsByClassName("dddefault")[0].innerText+"\nMatriculado en "+document.getElementsByClassName("ddlabel")[12].innerText+"\n\n\nPorfavor descargue el archivo y cárguelo en la extensión de su derecha.";
+var studentName=document.getElementsByClassName("dddefault")[0].innerText;
+var studentEnrollment="Matriculado en "+document.getElementsByClassName("ddlabel")[12].innerText;
+
+var message="Porfavor descargue el archivo y cárguelo en la extensión de su derecha.";
+
 var collection=document.getElementsByClassName("dddefault");
 var aux=0;
 //var subjects=[];
@@ -20,7 +24,11 @@ Array.prototype.forEach.call(collection, function(element) {
     }
     aux++;
 });
-window.alert(student);//falta el promedio y el resto de cosas
+
+document.cookie="studentName="+studentName+"; path=/";
+document.cookie="studentEnrollment="+studentEnrollment+"; path=/";
+window.alert(message);//falta el promedio y el resto de cosas
+
 //window.alert(arr);
 //Creating and downloading file
 let csvContent = "data:text/csv;charset=utf-8," 
