@@ -1,4 +1,9 @@
 function loadTable(element) {
+    for (var semestre = 1; semestre < 11; semestre++) {
+        dos(element, semestre)
+    }
+}
+function dos(element, semestre){
     var file = element.files[0];
     if (file) {
         var reader = new FileReader();
@@ -10,7 +15,7 @@ function loadTable(element) {
             var tableBody = document.createElement('tbody');
             var headerList = ["CÓDIGO", "NOMBRE", "NOTA", "CRÉDITOS"];
             var masterHeaderList = ["Semestre I", "Semestre II", "Semestre III", "Semestre IV", "Semestre V", "Semestre VI", "Semestre VII", "Semestre VIII", "Semestre IX", "Semestre X"];
-            for (var semestre = 1; semestre < 11; semestre++) {
+           // for (var semestre = 1; semestre < 11; semestre++) {
                 var tr = document.createElement('tr'); // Header row
                 var th = document.createElement('th');
                 th.className = "pricing-table-header-medium";
@@ -18,10 +23,8 @@ function loadTable(element) {
                 var text = document.createTextNode(masterHeaderList[semestre-1]);
                 th.appendChild(text);
                 tr.appendChild(th);
-                table.appendChild(tr);
-
-
-                // Hay que crear un row para ponerle un heacer
+                table.appendChild(tr);             
+                 // Hay que crear un row para ponerle un heacer
                 var tr = document.createElement('tr'); // Header row
                 for (var j = 0; j < 4; j++) {
                     var th = document.createElement('th'); //column
@@ -29,7 +32,7 @@ function loadTable(element) {
                     th.style = " padding: 15px";
                     var text = document.createTextNode(headerList[j]); //cell
                     th.appendChild(text);
-                    tr.appendChild(th);
+                    tr.appendChild(th);                    
                 }
                 //
                 // Crear tabla de 8 elementos, luego crear tabla nueva
@@ -49,7 +52,7 @@ function loadTable(element) {
                 });
                 table.appendChild(tableBody);
                 document.body.appendChild(table);
-            }
+            
         }
     }
 }
