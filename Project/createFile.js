@@ -1,19 +1,29 @@
-var studentName=toString(document.getElementsByClassName("dddefault")[0].innerText);
+
 var studentEnrollment="Matriculado en "+document.getElementsByClassName("ddlabel")[12].innerText;
 
-var message="Para mayor informacion, porfavor descargue el archivo y cárguelo en la extensión de su derecha.";
+var message="Para mayor informacion, por favor descargue el archivo y cárguelo en la extensión de su derecha.";
 function returnName(){
     return studentName;
 }
-var collection=document.getElementsByClassName("dddefault");
-studentName=collection[0].innerText;
+
+const collection=document.getElementsByClassName("dddefault");
+const collectionP=document.getElementsByClassName("rightaligntext");
+var notas=collectionP[0].innerText;
+var studentName=collection[0].innerText;
+var count=0;
+var totalCred=166;
+var promedio=0;
+
+
+
 var aux=0;
 //var subjects=[];
-var totalCred=166;
+
 var arr=[]; 
 var value=0;
 var credits=0;
 var multiplier=0;
+var y=[];
 Array.prototype.forEach.call(collection, function(element) {
     if(element.innerText=="UG"){ //element.colSpan == 5
         if(parseFloat(collection[aux+2].innerText)>=3 && !isNaN(collection[aux+3].innerText)&& collection[aux-2].innerText!="DEPO" && collection[aux-2].innerText!="LGAP" && collection[aux-2].innerText!="ALEA"){            
@@ -22,7 +32,9 @@ Array.prototype.forEach.call(collection, function(element) {
             arr.push(values.split("\n"));
             credits=credits+parseFloat(collection[aux+3].innerText);
             //La línea de arriba no va 
-            multiplier=parseFloat(collection[aux+2].innerText)*parseFloat(collection[aux+3].innerText);
+            multiplier=parseFloat(collection[aux+2].innerText)*parseFloat(collection[aux+3].innerText);            
+            y.push(multiplier);
+            
             value=parseFloat(value+multiplier);
 
         }else if(parseInt(collection[aux+2].innerText)<3){
@@ -41,6 +53,10 @@ Array.prototype.forEach.call(collection, function(element) {
 var reOpt = /opt/i;
 var reEle = /ele/i;
 
+for (var i=0;i<y.length;i++){
+    promedio=promedio+y[i];
+}
+value=promedio/credits;
 // Datos del estudiante a pasar por cookies
 document.cookie="studentName="+studentName+"; path=/";
 document.cookie="studentEnrollment="+studentEnrollment+"; path=/";

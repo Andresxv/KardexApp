@@ -7,7 +7,7 @@ function loadTable(element) {
     var semester3=["PROGRAMACIÓN II","ÉTICA GENERAL","ELECTRICIDAD Y MAGNETISMO","CALCULO MULTIVARIABLE","ALGEBRA LINEAL","MATEMÁTICAS DISCRETAS I"]
     allSemesters=[semester1,semester2,semester2]
     //document.write(name);
-    for (var semestre = 1; semestre < 4; semestre++) {
+    for (var semestre = 1; semestre < 11; semestre++) {
 
         dos(element, semestre,allSemesters[semestre-1])
     }
