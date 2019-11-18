@@ -1,9 +1,18 @@
+
 function loadTable(element) {
-    for (var semestre = 1; semestre < 11; semestre++) {
-        dos(element, semestre)
+    var allSemesters;
+    //var name=returnName;
+    var semester1=["HUMANISMO Y CULTURA CIUDADANA", "LÓGICA DE PROGRAMACIÓN","INT. INGEN. SISTEMAS E INFORM","CALCULO DIFERENCIAL","GEOMETRIA Y TRIGONOMETRIA"]
+    var semester2=["PROGRAMACION I","MECÁNICA","LENGUA Y CULTURA","CALCULO INTEGRAL","GEOMETRIA ANALITICA"]
+    var semester3=["PROGRAMACIÓN II","ÉTICA GENERAL","ELECTRICIDAD Y MAGNETISMO","CALCULO MULTIVARIABLE","ALGEBRA LINEAL","MATEMÁTICAS DISCRETAS I"]
+    allSemesters=[semester1,semester2,semester2]
+    //document.write(name);
+    for (var semestre = 1; semestre < 4; semestre++) {
+
+        dos(element, semestre,allSemesters[semestre-1])
     }
 }
-function dos(element, semestre){
+function dos(element, semestre, allSemesters){
     var file = element.files[0];
     if (file) {
         var reader = new FileReader();
